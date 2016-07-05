@@ -1,0 +1,5 @@
+"""initialisong script for accident_game"""
+
+from accident_part1 import come_around
+
+come_around()
