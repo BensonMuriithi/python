@@ -33,10 +33,10 @@ class Armory(Scene):
 		second_item = int(raw_input("\nEnter number of your second choice: "))
 		
 		for i in first_item, second_item:
-			if i is 1: self.engine.has_timebomb = True
-			elif i is 2 and self.engine.has_plasmagun: pass
-			elif i is 3: self.engine.has_teslagun = True
-			elif i is 4: self.engine.has_flamethrower = True
+			if i == 1: self.engine.has_timebomb = True
+			elif i == 2 and self.engine.has_plasmagun: pass
+			elif i == 3: self.engine.has_teslagun = True
+			elif i == 4: self.engine.has_flamethrower = True
 			
 		self.__screams()
 		

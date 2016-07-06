@@ -27,7 +27,7 @@ class EscapePod(Scene):
 			if num_of_guesses > 0: print "\nTry again."
 			trial = int(raw_input("Enter start number > "))
 			num_of_guesses += 1
-			if trial is number:
+			if trial == number:
 				self.__finish()
 			
 		self.__die_here()

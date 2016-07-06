@@ -32,8 +32,9 @@ def die(has_helped):
 		epillipsis()
 		print """
 		\rYou see a set of headlights coming up the opposite side of the hill
-		\r"I hope this driver stops to help me."
-		\rThe vehicle gets closer to the summit and you hold your guts hoping the driver stops
+		\r"I hope this driver stops to help me."""
+		sleep(1)
+		print """\rThe vehicle gets closer to the summit and you hold your guts hoping the driver stops
 		\rAfter reaching the summit the vehicle looks towards descent
 		\rSomething, probably your headlights disorients the approaching driver as the vehicle 
 		\rstarts to swerve across the road.
@@ -42,11 +43,13 @@ def die(has_helped):
 		wake_peter()
 		print """
 		\rThe lady directs you to approaching headlights ascending the hill
-		\rfrom the direction she came.
-		\r"Oh, thankyou!!" You blurt in exhileration.
+		\rfrom the direction she came."""
+		sleep(1)
+		print """\r"Oh, thankyou!!" You blurt in exhileration.
 		\rThe vehicle gets closer to the summit and you hold your guts hoping the driver stops
-		\rAfter reaching the summit the vehicle looks towards descent
-		\rSomething, probably your headlights disorients the approaching driver as the vehicle 
+		\rAfter reaching the summit the vehicle looks towards descent"""
+		sleep(1)
+		print"""\rSomething, probably your headlights, disorients the approaching driver as the vehicle 
 		\rstarts to swerve across the road.
 				"Oh God!!\"""",
 				
@@ -55,7 +58,7 @@ def die(has_helped):
 def finish():
 	sleep(0.72)
 	epillipsis()
-	sleep(7)
+	sleep(9)
 	
 def epillipsis():
 	for i in range(0, 6):

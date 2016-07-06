@@ -6,7 +6,7 @@ class CentralCorridor(Scene):
 		ellipsis(5)
 		print "You enter the central corridor."
 		print "It connects the control room, the armory and the bridge to the escape pods."
-		
+	
 		wait(1)
 		print "A gothon appears on the opposite end of the corridor coming from the bridge."
 		wait(1)

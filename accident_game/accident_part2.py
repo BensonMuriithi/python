@@ -5,7 +5,7 @@ from accident_part3 import ambulance_arrive
 def call_of_help(can_help, has_called_amb, num_ignored):
 	ignored = num_ignored
 	
-	sounds_of_help(ignored is 0)
+	sounds_of_help(ignored == 0)
 	
 	help_action = raw_input("> ").lower()
 	if "go" in help_action or "out" in help_action or "help" in help_action:

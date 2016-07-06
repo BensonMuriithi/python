@@ -23,7 +23,7 @@ def check_on_knees():
 	"""player is presented with chance to learn what is causing the character stress in his legs"""
 	print "What do you do at this point?"
 	action1 = raw_input("> ").lower()
-	if "look" in action1 and "down" in action1:
+	if "look" in action1 and "down" in action1 or "check" in action1:
 		look_down()
 	elif "down" in action1 or "knee" in action1 or "leg" in action1 or "lift" in action1:
 		look_down()

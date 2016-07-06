@@ -30,7 +30,7 @@ class Bridge(Scene):
 		if ("fire" in action or "flame" in action) and self.engine.has_flamethrower:
 			print "The gothon catches fire and falls to the ground wrigling."
 			self.__bombset()
-		elif ("shoot" in action or "fire" in action or "gun" in action) and self.engine.has_gun:
+		elif ("shoot" in action or "fire" in action or "gun" in action) and self.engine.has_gun():
 			print "The gothon is subdued but only temporarily."
 			self.__bombset()
 		elif "stare" in action or "down" in action or "chal" in action:
@@ -73,9 +73,9 @@ class Bridge(Scene):
 		correct = randint(1, 2)
 		route = raw_input("> ").lower()
 		if "le" in route:
-			self.__right_choice() if correct is 1 else self.__wrong_choice()
+			self.__right_choice() if correct == 1 else self.__wrong_choice()
 		elif "ri" in route:
-			self.__right_choice() if correct is 2 else self.__wrong_choice()
+			self.__right_choice() if correct == 2 else self.__wrong_choice()
 		else:
 			self.__wrong_choice()
 			

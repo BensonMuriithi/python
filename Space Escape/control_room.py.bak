@@ -8,8 +8,7 @@ class ControlRoom(Scene):
 		wait(1)
 		print "Something is terribly wrong!"
 		
-		ellipsis(4)
-		wait(0.5)
+		wait(2)
 		print "Swish!"
 		print "The control room's doors open without command."
 		

@@ -21,7 +21,7 @@ class CentralCorridor(Scene):
 		
 		action = raw_input("> ").lower()
 		
-		if ("shoot" in action or "plasma" in action or "gun" in action) and self.engine.has_plasmagun:
+		if ("shoot" in action or "plasma" in action or "gun" in action or "sho" in action) and self.engine.has_plasmagun:
 			self.__encourage()
 		elif "in" in action or "armory" in action:
 			self.engine.armory()

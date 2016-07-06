@@ -103,7 +103,7 @@ def plead():
 def mom_talk(has_called_amb, was_ignored):
 	has_ignored = was_ignored
 	plead() if has_ignored else get_to_car()
-	save_boy = raw_input("\nPlease do something! >>> " if had_ignored else "Do something! >>> ").lower()
+	save_boy = raw_input("\nPlease do something! >>> " if has_ignored else "Do something! >>> ").lower()
 	if "back" in save_boy or "save" in save_boy or "help" in save_boy or "rush" in save_boy or "check" in save_boy or "look" in save_boy:
 		print """
 		\rThere's a young boy seemingly below 6 years old suspended in a seat-belt

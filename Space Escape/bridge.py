@@ -73,9 +73,9 @@ class Bridge(Scene):
 		correct = randint(1, 2)
 		route = raw_input("> ").lower()
 		if "le" in route:
-			self.__right_choice() if correct is 1 else self.__wrong_choice()
+			self.__right_choice() if correct == 1 else self.__wrong_choice()
 		elif "ri" in route:
-			self.__right_choice() if correct is 2 else self.__wrong_choice()
+			self.__right_choice() if correct == 2 else self.__wrong_choice()
 		else:
 			self.__wrong_choice()
 			
