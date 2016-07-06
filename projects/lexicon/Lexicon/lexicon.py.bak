@@ -13,7 +13,7 @@ def scan(sentence):
 	for word in words:
 		word = word.lower()
 		while word[-1] in punctuations.split():
-			word.pop()
+			word = word[0: -1]
 		counter += 1
 		for l in directions, verbs, stop_words, nouns:
 			if word in l:
