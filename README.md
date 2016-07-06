@@ -1,5 +1,4 @@
-These are inidvidual projects but I put them all in my learning python project.
-
-They were assignment projects as per the Learn Python The Hard Way book by Zed Shaw.
+Projects I've worked on in the course of learning Python
+using the book Learn Python The Hard Way book by Zed Shaw.
 
 If any improvements can be made do tell.
