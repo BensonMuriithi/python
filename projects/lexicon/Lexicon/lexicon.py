@@ -1,5 +1,6 @@
 
 def scan(sentence):
+	"""Example of a module that would clasify natural text input within certain realms of a program."""
 	directions = ["direction", "north", "south", "east", "west", "up", "down", "left", "right", "back"]
 	verbs = ["verb", "go", "stop", "kill", "eat"]
 	stop_words = ["stop", "the", "in", "of", "from", "at", "it"]
