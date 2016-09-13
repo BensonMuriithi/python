@@ -2,4 +2,8 @@
 
 from accident_part1 import come_around
 
-come_around()
+def begin():
+	come_around()
+
+if __name__ == "__main__":
+	begin()
