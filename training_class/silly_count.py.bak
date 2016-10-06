@@ -1,0 +1,22 @@
+"""Silly count evaluates the value of a whole number to a specified base"""
+
+def get_value(number, base=10):
+	number = str(number)
+	decimal = number.find('.')
+	
+	if decimal >= 0:
+		raise ValueError("Invalid integer supply for conversion. Must not be float")
+	
+	pos_negtive = ''
+	if number.startswith(('-', '+')):
+		pos_negtive = number[0]
+		number = number[1:]
+	
+	number = [int(i) for i in number]
+	if filter(lambda i: i >= base, number):
+		raise ValueError("Invalid value for base {}".format(base))
+	value = reduce(lambda a, b: a + b, map(lambda d, p: d * (base ** p), number[::-1], xrange(len(number))))
+	if pos_negtive == '-':
+		return -value
+	else: return value
+

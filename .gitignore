@@ -1,0 +1,6 @@
+*.pyc
+.bak
+*egg-info*
+build
+dist
+projects

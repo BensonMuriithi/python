@@ -1,0 +1,31 @@
+from time import sleep
+from ex36_bens_part2 import final_sequence
+#from ex36_bens_part2 import wake_peter
+
+def die(has_helped):
+	if not has_helped:
+		print "You stay in the car still befuddled by your sorroundings."
+		#final_sequence(4)
+		print """
+You see a set of headlights coming up the opposite side of the hill
+"I hope this driver stops to help me."
+The vehicle gets closer to the summit and you hold your guts hoping the driver stops
+After reaching the summit the vehicle looks towards descent
+Something, probably your headlights disorients the approaching driver as the vehicle 
+starts to swerve across the road.
+		"Oh God!!\""""
+		
+	else:
+		#wake_peter()
+		print """
+The lady directs you to approaching headlights ascending the hill
+from the direction she came.
+"Oh, thankyou!!" You blurt in exhileration.
+The vehicle gets closer to the summit and you hold your guts hoping the driver stops
+After reaching the summit the vehicle looks towards descent
+Something, probably your headlights disorients the approaching driver as the vehicle 
+starts to swerve across the road.
+		"Oh God!!\""""
+		
+	
+	#final_sequence(8)

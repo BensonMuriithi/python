@@ -1,0 +1,10 @@
+def call():
+	print "I am ex36_part2"
+	tryhim("pain")
+	
+def pain(m):
+	print"""
+	%s
+	%s
+	%s
+	""" % (m, m, m)

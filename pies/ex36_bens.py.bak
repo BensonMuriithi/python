@@ -1,0 +1,92 @@
+"""text game written by Benson Muriithi"""
+from string import lower
+from ex36_bens_part2 import call_of_help
+from time import sleep
+
+def come_around():
+	print "\"Oooh! Aaarh!\""
+	sleep(1.5)
+	print """
+You are coming around in a spinning haze not knowing what's going on.
+As your senses come back to you, you hear an incessant ringing noise.
+You also make out water falling and a cracked up view.
+You start feeling some stress in a lower part of you but you dont't know what it is.
+The ringing noise is getting weaker
+You feel a headache and immediately realise that something heavy is lying on your knees.
+	"""
+	first_actions()
+
+def look_down_belt():
+	print """
+A seat belt holds you back and you feel a sharp pain in your right shoulder.
+What do you do?
+	"""
+	belt_off = lower(raw_input("> "))
+	if "off" in belt_off:
+		print "You take the belt off and look down to your knee."
+		print "It appears to be caught beneath the bottom of the dash board"
+		look_around(False)
+	else:
+		print "The pain in your shoulder jolts you and in your jump you bend your knee."
+		print "\nAAAARRRGH!!\nThe pain is unbearable."
+		look_around(True)
+		
+
+def first_actions():
+	print "What do you do at this point?"
+	action1 = lower(raw_input("> "))
+	if "look" in action1 and "down" in action1:
+		look_down_belt()
+	elif "down" in action1 or "knee" in action1 or "leg" in action1 or "lift" in action1:
+		look_down_belt()
+	else:
+		look_around(False)
+		
+def look_around(is_hurt):
+	print """
+You look around the vehicle and the sight rekindles your memory.
+You were driving home from your company."""
+	sleep(4)
+	print"""It takes a second for you to remember how exactly your car crashed
+You were driving up a hill and it was raining cats and dogs you remember.
+Yes; some vehicle blinded you with its headlights as it
+came down from the hill's summit to which you were close.
+The rest you remember is fear and then waking up in dizziness
+	"""
+	print "You remember you had your phone in your blazer's front pocket."
+	get_phone = lower(raw_input("Do you reach for it? > "))
+	if "yes" in get_phone or "get" in get_phone or "yeah" in get_phone:
+		if(is_hurt):
+			print "\"Ouch!\" The shoulder is hurting."
+		print "\nWhat do you want to do with the phone?"
+		phone_action1 = lower(raw_input("> "))
+		if "call" in phone_action1 and ("police" in phone_action1 or "ambulance" in action1 or "emergency" in phone_action1):
+			sleep(1.2)
+			print "\nYou dial the emergency services and inform them of you accident. Good job!"
+			print "You're told that an ambulance has been sent towards you."
+			print "You lie to wait for the medics to arrive and assist you get out of the wreck.\n"
+			call_of_help(not is_hurt, True)
+		elif "call" in phone_action1:
+			sleep(1.2)
+			print "You dial the number but the target doesn't pick up the phone."
+			print "\"What? What time could it be?\""
+			print "The phone reveals that it is 18 minutes afterr midnight."
+			print "What do you now?"
+			phone_action2 = lower(raw_input("> "))
+			print "\nAs you fumble about you hear something."
+			call_of_help(not is_hurt, False)
+		else:
+			fumble(is_hurt)
+	else:
+		fumble(is_hurt)
+			
+def fumble(is_hurt):
+	print """
+You keep looking around and realise that the light in your car is not from within.
+There's a pair of headlights projecting in the direction of your car from ahead.
+As you look at the vehicle ahead you hear something.
+	"""
+	call_of_help(not is_hurt, False)
+	
+
+come_around()

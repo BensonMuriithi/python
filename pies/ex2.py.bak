@@ -1,0 +1,9 @@
+#comments
+#A pound character marks the begining of a comment
+#Comments cn be used to label what parts of a program or a program does
+print "This is a line." #The part preceding this will print the string
+
+#Comments can also be sued to make parts of a program temporarily disabled
+#print "This will not print"
+
+print "This is a good program."

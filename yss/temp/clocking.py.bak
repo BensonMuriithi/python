@@ -1,0 +1,15 @@
+"""Module for measuring the execution time of a function and returning it in a string
+
+	The module uses a decorator function that should be used with a function
+	to time the function"""
+
+from time import time
+	
+def timeit(func):
+	def wrap(*args, **kwargs):
+		start = time()
+		func(*args, **kwargs)
+		stop = time()
+		return "Function %s took %s" % (func.__name__, str((stop-start)))
+	
+	return wrap

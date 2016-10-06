@@ -1,0 +1,13 @@
+"""Accept string from im=nput and calculate the occurence of every word in the input
+print the results in alphanumeric order for the words"""
+
+entered = raw_input("Enter sentence: ").split()
+
+result = {}
+
+for i in range(0, len(entered)):
+	if result.has_key(entered[i]): result[entered[i]] += 1
+	else: result[entered[i]] = 1
+	
+for x in sorted(entered.keys()):
+	print "%s: %d" % (x, entered[x])

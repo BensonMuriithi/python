@@ -1,4 +1,3 @@
-Projects I've worked on in the course of learning Python
-using the book Learn Python The Hard Way book by Zed Shaw.
+My working directory in the course of learning Python
 
-If any improvements can be made do tell.
+This is not refined at all and only meant to be a backup
