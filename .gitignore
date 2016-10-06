@@ -1,5 +1,5 @@
 *.pyc
-.bak
+*.bak
 *egg-info*
 build
 dist
