@@ -4,27 +4,39 @@
 	The functions so far aren't as fast as those of Python's
 """
 
-def getmax(*args):
-	"""Return greatest member of the arguments given"""
-	start = 0
-	limit = len(args)
-	i = 1
+from operator import lt, gt
+
+def _max_or_min(operation, *args):
+	if len(args) is 1:
+		try:
+			return _max_or_min(operation, *args[0])
+		except TypeError:
+			return args[0]
 	
-	while i < limit:
-		if args[start] < args[i]: start = i
-		i += 1
-	return args[start]
+	max_pos = 0
+	for i in xrange(1, len(args)):
+		if operation(args[i], args[max_pos]):
+			max_pos = i
+	
+	return args[max_pos]
+
+def getmax(*args):
+	"""
+	Return greatest value among the values provided
+	If a collection is provided, the function works on that collection
+	instead. However if multiple collections are provided, they will be
+	treated as single values.
+	"""
+	return _max_or_min(gt, *args)
 
 def getmin(*args):
-	"""Return the least of arguments provided"""
-	start = 0
-	limit = len(args)
-	i = 1
-	
-	while i < limit:
-		if args[start] > args[i]: start = i
-		i += 1
-	return args[start]
+	"""
+	Return least value among the values provided
+	If a collection is provided, the function works on that collection
+	instead. However if multiple collections are provided, they will be
+	treated as single values.
+	"""
+	return _max_or_min(lt, *args)
 
 
 if __name__ == "__main__":
